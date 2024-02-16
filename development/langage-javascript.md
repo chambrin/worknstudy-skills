@@ -6,34 +6,51 @@
 
 ## 🎓 J'ai compris et je peux expliquer
 
-- les `structures` de base du langage ❌ / ✔️
-- les normes `ecmascript` ❌ / ✔️
-- l'utilisation de l'`asynchrone` ❌ / ✔️
-- les spécifités du mot-clef `this` ❌ / ✔️
+- les `structures` de base du langage  ✔️
+- les normes `ecmascript`  ✔️
+- l'utilisation de l'`asynchrone`  ✔️
+- les spécifités du mot-clef `this`  ✔️
 
 ## 💻 Je code en Javascript
 
 ### Un exemple de code commenté ❌ / ✔️
 
 ```javascript
-(e) => mc2;
+class PokemonAPI {
+    constructor(apiUrl) {
+        this.apiUrl = apiUrl;
+    }
+
+    async getPokemonById(id) {
+        // Utiliser "this.apiUrl" pour faire référence à l'URL de l'API PokeAPI
+        const response = await fetch(`${this.apiUrl}/pokemon/${id}`);
+        const pokemonData = await response.json();
+        return pokemonData;
+    }
+}
+
+// Créer une instance de la classe PokemonAPI avec l'URL de l'API de la PokeAPI
+const pokeAPI = new PokemonAPI('https://pokeapi.co/api/v2');
+
+// Utiliser la méthode getPokemonById pour obtenir les informations d'un pokémon spécifique 
+pokeAPI.getPokemonById(1).then(data => console.log(data));
 ```
 
-### Utilisation dans un projet ❌ / ✔️
+### Utilisation dans un projet  ✔️
 
-[lien github](...)
-
-Description :
-
-### J'ai utilisé ce langage en production ❌ / ✔️
-
-[lien du projet](...)
+[[lien github](...)](https://github.com/chambrin/PokeNext)
 
 Description :
 
-### J'ai utilisé ce langage en environement professionnel ❌ / ✔️
+### J'ai utilisé ce langage en production  ✔️
 
-Description :
+[[lien du projet](...)](https://poke-next-topaz.vercel.app/)
+
+Description : pokedex utilisant la pokeapi
+
+### J'ai utilisé ce langage en environement professionnel  ✔️
+
+Description : quotidiennement
 
 ## 🌐 J'utilise des ressources
 
