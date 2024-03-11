@@ -1,59 +1,67 @@
 # REST API
 
-> ❌ A travailler
-
 > ✔️ Auto validation par l'étudiant
 
 ## 🎓 J'ai compris et je peux expliquer
 
-- les verbes HTTP ❌ / ✔️
-- les statuts HTTP ❌ / ✔️
-- les endpoints ❌ / ✔️
-- CORS ❌ / ✔️
-- la nomenclature recommandée pour les routes ❌ / ✔️
+- les verbes HTTP  ✔️
+- les statuts HTTP ✔️
+- les endpoints  ✔️
+- CORS  ✔️
+- la nomenclature recommandée pour les routes  ✔️
 
 ## 💻 J'utilise
 
-### Un exemple personnel commenté ❌ / ✔️
+### Un exemple personnel commenté  ✔️
+```javascript
 
-### Utilisation dans un projet ❌ / ✔️
+            export async function GET(request: Request, res: Response) {
+                const data = {"id": 1, "name": "Aur\u00e9lie Delaunay du Pr\u00e9vost", "email": "elisabethlombard@example.com", "username": "richardpereira", "job": "assistant de gestion en PME", "gender": "Femme", "phone_number": "+33 (0)3 65 76 33 39", "website": "http://perrot.fr/", "address": "703, rue de Barre, 61122 Martel", "birthdate": "1978-04-23", "age": 45, "interests": ["Cin\u00e9ma", "Photo"], "user_image_url": "/random_avatar/user_1.png", "background_image_url": "https://source.unsplash.com/random/1920x1080"};
 
-[lien github](...)
+                return new Response(JSON.stringify(data), {
+                    status: 200,
+                    headers: {
+                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+                    },
+                });
+            }
+```
+### Utilisation dans un projet  ✔️
+
+https://github.com/chambrin/random-user-generator-api
 
 Description :
 
-### Utilisation en production si applicable❌ / ✔️
+### Utilisation en production si applicable ✔️
 
-[lien du projet](...)
-
-Description :
-
-### Utilisation en environement professionnel ❌ / ✔️
+site : https://random-user-generator-api-delta.vercel.app/
+exemple de lien api : https://random-user-generator-api-delta.vercel.app/api/user/1
 
 Description :
+
+### Utilisation en environement professionnel  ✔️
+
+Description : Création de diverses API REST pour rendre les informations de base de données disponibles via une API REST.
 
 ## 🌐 J'utilise des ressources
 
-### Titre
-
-- lien
-- description
+- Pas de ressource spécifique.
 
 ## 🚧 Je franchis les obstacles
 
-### Point de blocage ❌ / ✔️
+### Point de blocage  ✔️
 
-Description:
+Description: Pas de blocage
 
 Plan d'action : (à valider par le formateur)
 
-- action 1 ❌ / ✔️
-- action 2 ❌ / ✔️
-- ...
 
 Résolution :
 
 ## 📽️ J'en fais la démonstration
 
-- J'ai ecrit un [tutoriel](...) ❌ / ✔️
-- J'ai fait une [présentation](...) ❌ / ✔️
+- J'ai ecrit un [tutoriel](...)  ✔️
+- J'ai fait une [présentation](...) ✔️
