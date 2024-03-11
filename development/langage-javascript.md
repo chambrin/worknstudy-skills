@@ -1,7 +1,5 @@
 # Langage Javascript
 
-> ❌ A travailler
-
 > ✔️ Auto validation par l'étudiant
 
 ## 🎓 J'ai compris et je peux expliquer
