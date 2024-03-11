@@ -38,9 +38,10 @@ Description :
 ### Utilisation en production si applicable ✔️
 
 site : https://random-user-generator-api-delta.vercel.app/
+
 exemple de lien api : https://random-user-generator-api-delta.vercel.app/api/user/1
 
-Description :
+Description : Un projet qui crée des liens API de faux utilisateurs, pour faciliter le développement.
 
 ### Utilisation en environement professionnel  ✔️
 
